@@ -1,42 +1,73 @@
-#root {
-  max-width: 1280px;
+:root {
+  background-image: url(/public/v567-mynt-doodles-01.jpg);
   margin: 0 auto;
-  padding: 2rem;
+  padding-left: 600px;
+  background-size: contain;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: black;
+  display: flex;
+  place-items: center;
+  min-height: 100px;
+  line-height: 1.5;
+}
+
+table td {
+  background-color: rgb(24, 24, 24);
+  justify-content: center;
+  width: 300px;
+}
+
+table th {
+  background-color: rgb(240, 179, 130);
+  width: 100px;
+}
+
+tr,
+td,
+th {
+  border-color: transparent;
+  border-spacing: 10px;
+  height: 50px;
+  width: 500px;
+  text-align: center;
+  justify-content: center;
+  background-color: none;
+  border-style: none;
+  border-radius: 20px;
+  color: white;
+}
+caption {
+  font-size: 33px;
+  margin-bottom: 20px;
+}
+
+th {
+  font-size: 20px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+td {
+  text-align: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#greetings {
+  font-size: 100px;
+  color: grey;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#listStudents {
+  font-size: 30px;
+}
+#count {
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-left: 50px;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+ul {
+  margin-left: 120px;
 }

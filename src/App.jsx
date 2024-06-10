@@ -28,7 +28,7 @@ const listStudents = (students) => {
 const tableStudents = (object) => {
   const element1 = object.map((data, index) => {
     const gradeStyle = {
-      color: data.grade < 5 ? "red" : "black",
+      background: data.grade < 5 ? "rgb(209, 127, 121)" : "lightseagreen",
     };
     return (
       <tr key={index}>
@@ -39,9 +39,9 @@ const tableStudents = (object) => {
   });
   return (
     <table>
-      <caption>Students</caption>
-      <th>Name</th>
-      <th>Grade</th>
+      <caption>REBOOT STUDENTS</caption>
+      <th>NAME</th>
+      <th>GRADE</th>
       {element1}
     </table>
   );
@@ -51,9 +51,9 @@ function App() {
   return (
     <>
       {" "}
-      <div>{greetMessage("Alma!")}</div>
-      <div>{listStudents(studentsArray)}</div>
-      <div>There are {numberStudents} students in the class</div>
+      <div id="greetings">{greetMessage("Alma!")}</div>
+      <div id="listStudents">{listStudents(studentsArray)}</div>
+      <div id="count">There are {numberStudents} students in the class</div>
       {tableStudents(studentsGrades)}
     </>
   );
