@@ -39,7 +39,8 @@ const studentsTable = (arr) => {
     );
   });
   return (
-    <table>
+    <table id="allStudents">
+      <thead>All the students</thead>
       <tr>
         <th>Student</th>
         <th>Grade</th>
@@ -49,13 +50,64 @@ const studentsTable = (arr) => {
   );
 };
 
+const successStudents = (arr) => {
+  const studentList = arr.map((student, index) => {
+    if (student.grade >= 5) {
+     return (
+       <tr key={index}>
+         <th>{student.name}</th>
+         <th>{student.grade}/10</th>
+       </tr>
+     );
+    } 
+    return 
+  });
+  return (
+    <table id="passStudents">
+      <thead>Students who passed</thead>
+      <tr>
+        <th>Student</th>
+        <th>Grade</th>
+      </tr>
+      {studentList}
+    </table>
+  );
+};
+
+const failStudents = (arr) => {
+  const studentList = arr.map((student, index) => {
+    if (student.grade < 5) {
+      return (
+        <tr key={index}>
+          <th>{student.name}</th>
+          <th>{student.grade}/10</th>
+        </tr>
+      );
+    }
+    return;
+  });
+  return (
+    <table id="failStudents">
+      <thead>Students who failed</thead>
+      <tr>
+        <th>Student</th>
+        <th>Grade</th>
+      </tr>
+      {studentList}
+    </table>
+  );
+};
+
+
 function App() {
   return (
     <>
-      <div>Welcome, {username}!</div>
-      <div>{theseStudents(studentsArray)}</div>
-      <div>This class has {showTotal(studentsArray)} students.</div>
+      <div id="welcome">Welcome, {username}!</div>
+      <div id="studentsList">{theseStudents(studentsArray)}</div>
+      <div id="statement">This class has {showTotal(studentsArray)} students.</div>
       <div>{studentsTable(studentsArray)}</div>
+      <div>{successStudents(studentsArray)}</div>
+      <div>{failStudents(studentsArray)}</div>
     </>
   );
 }

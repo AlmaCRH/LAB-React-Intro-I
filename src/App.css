@@ -1,4 +1,44 @@
+* {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+}
+
+#welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#studentsList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: pink;
+  padding: 2rem;
+  border-radius: 40px;
+}
+
+#statement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem
+}
+
 .failed {
   color: red;
+}
+
+#allStudents {
+  justify-content: center;
+  align-items: center;
 }
 
