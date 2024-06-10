@@ -53,12 +53,12 @@ const studentsTable = (students) => {
           <b>Students</b>
         </thead>
         <tr class="data">
-          <td>
+          <th>
             <u>Name</u>
-          </td>
-          <td>
+          </th>
+          <th>
             <u>Grade</u>
-          </td>
+          </th>
         </tr>
         {tableStudents}
       </table>
@@ -83,12 +83,12 @@ const passedStudents = (students) => {
           <b>Students</b>
         </thead>
         <tr class="data">
-          <td>
+          <th>
             <u>Name</u>
-          </td>
-          <td>
+          </th>
+          <th>
             <u>Grade</u>
-          </td>
+          </th>
         </tr>
         {tableStudents}
       </table>
@@ -123,12 +123,12 @@ const studentsTableSortedByGrade = (students) => {
           <b>Students</b>
         </thead>
         <tr class="data">
-          <td>
+          <th>
             <u>Name</u>
-          </td>
-          <td>
+          </th>
+          <th>
             <u>Grade</u>
-          </td>
+          </th>
         </tr>
         {tableStudents}
       </table>
@@ -163,12 +163,12 @@ const studentsTableSortedByName = (students) => {
           <b>Students</b>
         </thead>
         <tr class="data">
-          <td>
+          <th>
             <u>Name</u>
-          </td>
-          <td>
+          </th>
+          <th>
             <u>Grade</u>
-          </td>
+          </th>
         </tr>
         {tableStudents}
       </table>
