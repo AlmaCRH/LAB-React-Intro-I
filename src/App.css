@@ -4,4 +4,21 @@ body {
   font-weight: 400;
   background-color: black;
   color: white;
+  padding: 20px;
+}
+
+.failed {
+  background-color: red;
+}
+
+#table-passed {
+  background-color: green;
+}
+
+#table-failed {
+  background-color: red;
+}
+
+div {
+  padding: 10px;
 }
