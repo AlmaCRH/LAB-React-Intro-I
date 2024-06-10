@@ -1,0 +1,15 @@
+table{
+    border: 1px solid green;
+    text-align: center;
+}
+
+#tabla2 td{
+    color: white;
+}
+tr,th,td {
+    padding: 10px;
+}
+caption{
+    margin: 10px;
+    color: green;
+}
