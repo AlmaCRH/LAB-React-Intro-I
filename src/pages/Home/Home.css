@@ -1,0 +1,58 @@
+.active {
+  background-color: aqua;
+}
+
+.passed {
+  background-color: green;
+}
+
+.failed {
+  background-color: red;
+}
+
+table {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  width: 30%;
+  padding: 3%;
+}
+
+thead {
+  font-size: 35px;
+  color: darkslateblue;
+}
+
+.data {
+  font-size: 30px;
+  color: rgb(11, 109, 221);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+h1 {
+  position: relative;
+  padding: 2%;
+  left: 3%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#root {
+  margin-left: 12%;
+}
+
+ul {
+  margin-left: 7%;
+}
+
+li {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  color: #7212cc;
+}
+
+.total {
+  font-size: 25px;
+  position: relative;
+  color: #0064a7;
+  left: 5%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;
+}
