@@ -4,7 +4,7 @@ const studentsArray = ["Toni", "Karen", "Angelo", "Marta", "Tati"];
 const numberStudents = studentsArray.length;
 const studentsGrades = [
   { name: "Toni", grade: "14" },
-  { name: "Karen", grade: "12" },
+  { name: "Karen", grade: "2" },
   { name: "Angelo", grade: "11" },
   { name: "Marta", grade: "12" },
   { name: "Tati", grade: "17" },
@@ -27,10 +27,13 @@ const listStudents = (students) => {
 
 const tableStudents = (object) => {
   const element1 = object.map((data, index) => {
+    const gradeStyle = {
+      color: data.grade < 5 ? "red" : "black",
+    };
     return (
       <tr key={index}>
         <th>{data.name}</th>
-        <td>{data.grade}</td>
+        <td style={gradeStyle}>{data.grade}</td>
       </tr>
     );
   });
