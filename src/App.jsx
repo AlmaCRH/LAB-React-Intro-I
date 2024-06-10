@@ -32,8 +32,8 @@ const studentTable = (array) => {
     } else passed = true;
     return (
       <tr key={index}>
-        <th className={passed ? "passed" : "failed"}>{student.name}</th>
-        <th className={passed ? "passed" : "failed"}>{student.grade}/10</th>
+        <td className={passed ? "passed" : "failed"}>{student.name}</td>
+        <td className={passed ? "passed" : "failed"}>{student.grade}/10</td>
       </tr>
     );
   });
@@ -42,8 +42,8 @@ const studentTable = (array) => {
       <caption>All Students</caption>
       <tbody>
         <tr>
-          <th>Student</th>
-          <th>Grade</th>
+          <td>Student</td>
+          <td>Grade</td>
         </tr>
         {studentList}
       </tbody>
@@ -58,8 +58,8 @@ const passedStudentsTable = (array) => {
     if (student.grade >= 5) {
       return (
         <tr key={index}>
-          <th>{student.name}</th>
-          <th>{student.grade}/10</th>
+          <td>{student.name}</td>
+          <td>{student.grade}/10</td>
         </tr>
       );
     } else return;
@@ -69,8 +69,8 @@ const passedStudentsTable = (array) => {
       <caption>Students that passed</caption>
       <tbody>
         <tr>
-          <th>Student</th>
-          <th>Grade</th>
+          <td>Student</td>
+          <td>Grade</td>
         </tr>
         {studentList}
       </tbody>
@@ -85,8 +85,8 @@ const failedStudentsTable = (array) => {
     if (student.grade < 5) {
       return (
         <tr key={index}>
-          <th>{student.name}</th>
-          <th>{student.grade}/10</th>
+          <td>{student.name}</td>
+          <td>{student.grade}/10</td>
         </tr>
       );
     } else return;
@@ -96,8 +96,8 @@ const failedStudentsTable = (array) => {
       <caption>Students that Failed</caption>
       <tbody>
         <tr>
-          <th>Student</th>
-          <th>Grade</th>
+          <td>Student</td>
+          <td>Grade</td>
         </tr>
         {studentList}
       </tbody>
@@ -108,12 +108,20 @@ const failedStudentsTable = (array) => {
 function App() {
   return (
     <>
-      <div>Welcome {username}!</div>
-      <div>{showStudents(students)}</div>
-      <div>There are {countStudents(students)} students!</div>
-      <div>{studentTable(students)}</div>
-      <div>{passedStudentsTable(students)}</div>
-      <div>{failedStudentsTable(students)}</div>
+      <section id="container">
+        <p>Iteration 1</p>
+        <div id="it1">Welcome {username}!</div>
+        <p>Iteration 2</p>
+        <div id="it2">{showStudents(students)}</div>
+        <p>Iteration 3</p>
+        <div id="it3">There are {countStudents(students)} students!</div>
+        <p>Iteration 4&5</p>
+        <div id="it4-5">{studentTable(students)}</div>
+        <p>Bonus</p>
+        <div id="bonus">{passedStudentsTable(students)}</div>
+        <p>Extra Bonus</p>
+        <div id="extra-bonus">{failedStudentsTable(students)}</div>
+      </section>
     </>
   );
 }

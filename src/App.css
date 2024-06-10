@@ -7,34 +7,71 @@ body {
   padding: 20px;
 }
 
-.failed {
-  background-color: red;
-  color: white;
+#container {
+  display: flex;
+  flex-direction: column;
 }
 
-table{
+#it1 {
+  align-self: center;
+  justify-self: center;
+}
+
+#it2 {
+  align-self: center;
+  justify-self: center;
+}
+#it3 {
+  align-self: center;
+  justify-self: center;
+}
+#it4-5 {
+  align-self: center;
+  justify-self: center;
+}
+
+table {
+  text-align: center;
   background-color: wheat;
+  border-spacing: 10px;
 }
 
 #table-all {
-  
   color: black;
 }
 
-#table-passed {
-  color: green;
-}
-
-#table-failed {
-  color: red;
-}
-
-div {
-  padding: 10px;
+.failed {
+  background-color: red;
+  color: white;
 }
 
 caption {
   color: black;
   background-color: wheat;
   font-weight: bold;
+}
+
+#bonus {
+  align-self: center;
+  justify-self: center;
+}
+
+#table-passed {
+  color: green;
+}
+
+#extra-bonus {
+  align-self: center;
+  justify-self: center;
+}
+
+#table-failed {
+  color: red;
+}
+
+p {
+  align-self: center;
+  justify-self: center;
+  font-weight: bold;
+  font-size: 32px;
 }
