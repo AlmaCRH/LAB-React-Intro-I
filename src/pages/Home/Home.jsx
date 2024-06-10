@@ -96,12 +96,52 @@ const passedStudents = (students) => {
   );
 };
 
-const studentsTableSorted = (students) => {
+const studentsTableSortedByGrade = (students) => {
   let aux;
   for (let i = 0; i < students.length; i++) {
     for (let j = i + 1; j < students.length; j++) {
       aux = students[i];
-      if (students[j].name[0] < aux.name[0]) {
+      if (students[j].grade < aux.grade) {
+        students[i] = students[j];
+        students[j] = aux;
+      }
+    }
+  }
+  const tableStudents = students.map((student, id) => {
+    if (student.grade > 5)
+      return (
+        <tr class="passed" key={id}>
+          <td>{student.name}</td>
+          <td>{student.grade}</td>
+        </tr>
+      );
+  });
+  return (
+    <>
+      <table>
+        <thead>
+          <b>Students</b>
+        </thead>
+        <tr class="data">
+          <td>
+            <u>Name</u>
+          </td>
+          <td>
+            <u>Grade</u>
+          </td>
+        </tr>
+        {tableStudents}
+      </table>
+    </>
+  );
+};
+
+const studentsTableSortedByName = (students) => {
+  let aux;
+  for (let i = 0; i < students.length; i++) {
+    for (let j = i + 1; j < students.length; j++) {
+      aux = students[i];
+      if (students[j].name < aux.name) {
         students[i] = students[j];
         students[j] = aux;
       }
@@ -144,7 +184,8 @@ const Home = () => {
       {listNames(students)}
       {studentsTable(students)}
       {passedStudents(students)}
-      {studentsTableSorted(students)}
+      {studentsTableSortedByGrade(students)}
+      {studentsTableSortedByName(students)}
     </>
   );
 };
