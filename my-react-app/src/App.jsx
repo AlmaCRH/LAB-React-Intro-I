@@ -57,6 +57,51 @@ const tabla2 = (alumnosTabla) => {
   )
 }
 
+const tabla3 = (alumnosTabla) => {
+  return (
+    <table id='tabla3'>
+      <caption>Notas de Alumnos</caption>
+      <tr>
+        <th>Nombre</th>
+        <th>Grade</th>
+      </tr>
+      {alumnosTabla.filter((alumno) => alumno.grade >= 5)
+      .sort((a,b) => b.grade - a.grade)
+      .map((alumno, index) => {
+        return(
+          <tr key={index}>
+            <td>{alumno.name}</td>
+            <td>{alumno.grade}</td>
+          </tr>
+        )        
+      })}
+    </table>
+  )
+}
+
+
+const tabla4 = (alumnosTabla) => {
+  return (
+    <table id='tabla4'>
+      <caption>Notas de Alumnos</caption>
+      <tr>
+        <th>Nombre</th>
+        <th>Grade</th>
+      </tr>
+      {alumnosTabla.filter((alumno) => alumno.grade < 5)
+      .sort((a,b) => b.nombre - a.nombre)
+      .map((alumno, index) => {
+        return(
+          <tr key={index}>
+            <td>{alumno.name}</td>
+            <td>{alumno.grade}</td>
+          </tr>
+        )        
+      })}
+    </table>
+  )
+}
+
 function App() {
   const username = "Ale";
   const alumnos = ["Ale", "Zindy", "Borja", "Diana", "Flavio", "Tony"];
@@ -84,6 +129,12 @@ function App() {
 
       <h2>Iteration 5 - Mark the students with failing grades</h2>
       {tabla2(alumnosTabla)}
+
+      <h2>BONUS</h2>
+      {tabla3(alumnosTabla)}
+
+      <h2>EXTRA BONUS</h2>
+      {tabla4(alumnosTabla)}
     </>
   )
 }
