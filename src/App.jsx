@@ -50,8 +50,11 @@ const studentsTable = (arr) => {
   );
 };
 
-const successStudents = (arr) => {
-  const studentList = arr.map((student, index) => {
+const thoseWhoPassed = (arr) => {
+  const passedOnes = arr.filter((student) => student.grade >= 5);
+  passedOnes.sort((a, b) => b.grade - a.grade)
+
+  const studentList = passedOnes.map((student, index) => {
     if (student.grade >= 5) {
      return (
        <tr key={index}>
@@ -106,7 +109,7 @@ function App() {
       <div id="studentsList">{theseStudents(studentsArray)}</div>
       <div id="statement">This class has {showTotal(studentsArray)} students.</div>
       <div>{studentsTable(studentsArray)}</div>
-      <div>{successStudents(studentsArray)}</div>
+      <div>{thoseWhoPassed(studentsArray)}</div>
       <div>{failStudents(studentsArray)}</div>
     </>
   );
