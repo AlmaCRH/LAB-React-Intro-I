@@ -9,16 +9,32 @@ body {
 
 .failed {
   background-color: red;
+  color: white;
+}
+
+table{
+  background-color: wheat;
+}
+
+#table-all {
+  
+  color: black;
 }
 
 #table-passed {
-  background-color: green;
+  color: green;
 }
 
 #table-failed {
-  background-color: red;
+  color: red;
 }
 
 div {
   padding: 10px;
+}
+
+caption {
+  color: black;
+  background-color: wheat;
+  font-weight: bold;
 }

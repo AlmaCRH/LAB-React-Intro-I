@@ -3,13 +3,13 @@ import "./App.css";
 const username = "Angelo";
 
 const students = [
-  { name: "Student 1", grade: 3 },
-  { name: "Student 2", grade: 7 },
-  { name: "Student 3", grade: 1 },
-  { name: "Student 4", grade: 3 },
-  { name: "Student 5", grade: 10 },
-  { name: "Student 6", grade: 2 },
-  { name: "Student 7", grade: 5 },
+  { name: "Pepe", grade: 3 },
+  { name: "Juan", grade: 7 },
+  { name: "Marcos", grade: 1 },
+  { name: "Sara", grade: 3 },
+  { name: "Manuel", grade: 10 },
+  { name: "Falete", grade: 2 },
+  { name: "Paca", grade: 5 },
 ];
 
 const showStudents = (array) => {
@@ -52,7 +52,9 @@ const studentTable = (array) => {
 };
 
 const passedStudentsTable = (array) => {
-  const studentList = array.map((student, index) => {
+  const passedStudents = array.filter((student) => student.grade >= 5);
+  passedStudents.sort((a, b) => b.grade - a.grade);
+  const studentList = passedStudents.map((student, index) => {
     if (student.grade >= 5) {
       return (
         <tr key={index}>
@@ -77,7 +79,9 @@ const passedStudentsTable = (array) => {
 };
 
 const failedStudentsTable = (array) => {
-  const studentList = array.map((student, index) => {
+  const failedStudents = array.filter((student) => student.grade < 5);
+  failedStudents.sort((a, b) => a.name.localeCompare(b.name));
+  const studentList = failedStudents.map((student, index) => {
     if (student.grade < 5) {
       return (
         <tr key={index}>
