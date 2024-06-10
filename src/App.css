@@ -1,7 +1,9 @@
 * {
-  margin: 0;
-  font-family: 'Courier New', Courier, monospace;
+  margin: auto;
+  font-family: "Courier New", Courier, monospace;
   font-size: 18px;
+  background-color: black;
+  color: white;
 }
 
 #welcome {
@@ -15,14 +17,22 @@
 }
 
 #studentsList {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
+  display: inline-block;
   background-color: pink;
   padding: 2rem;
   border-radius: 40px;
+}
+
+ul {
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+li {
+  background-color: pink;
+  color: black;
 }
 
 #statement {
@@ -30,7 +40,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem
+  padding: 1.5rem;
 }
 
 .failed {
@@ -40,5 +50,27 @@
 #allStudents {
   justify-content: center;
   align-items: center;
+  background-color: #a797d1;
+  margin-bottom: 2rem;
 }
 
+#passStudents {
+  justify-content: center;
+  align-items: center;
+  background-color: #adcc89;
+  margin-bottom: 2rem;
+}
+
+#failStudents {
+  justify-content: center;
+  align-items: center;
+  background-color: #eba37c;
+  margin-bottom: 2rem;
+}
+
+thead {
+  position: relative;
+  padding: 1.5rem;
+  background-color: white;
+  color: black;
+}

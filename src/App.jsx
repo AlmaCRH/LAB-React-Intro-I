@@ -3,14 +3,14 @@ import "./App.css";
 const username = "Gyo";
 
 const studentsArray = [
-  { name: 'Stan', grade: 8 },
-  { name: 'Kyle', grade: 10 },
-  { name: 'Eric', grade: 3 },
-  { name: 'Kenny', grade: 4 },
-  { name: 'Butters', grade: 6 },
-  { name: 'Craig', grade: 5 },
-  { name: 'Tweek', grade: 2 },
-  { name: 'Token', grade: 9 },
+  { name: "Stan", grade: 8 },
+  { name: "Kyle", grade: 10 },
+  { name: "Eric", grade: 3 },
+  { name: "Kenny", grade: 4 },
+  { name: "Butters", grade: 6 },
+  { name: "Craig", grade: 5 },
+  { name: "Tweek", grade: 2 },
+  { name: "Token", grade: 9 },
 ];
 
 const theseStudents = (arr) => {
@@ -52,18 +52,18 @@ const studentsTable = (arr) => {
 
 const thoseWhoPassed = (arr) => {
   const passedOnes = arr.filter((student) => student.grade >= 5);
-  passedOnes.sort((a, b) => b.grade - a.grade)
+  passedOnes.sort((a, b) => b.grade - a.grade);
 
   const studentList = passedOnes.map((student, index) => {
     if (student.grade >= 5) {
-     return (
-       <tr key={index}>
-         <th>{student.name}</th>
-         <th>{student.grade}/10</th>
-       </tr>
-     );
-    } 
-    return 
+      return (
+        <tr key={index}>
+          <th>{student.name}</th>
+          <th>{student.grade}/10</th>
+        </tr>
+      );
+    }
+    return;
   });
   return (
     <table id="passStudents">
@@ -78,7 +78,9 @@ const thoseWhoPassed = (arr) => {
 };
 
 const failStudents = (arr) => {
-  const studentList = arr.map((student, index) => {
+  const failedStudents = arr.filter((student) => student.grade < 5);
+  failedStudents.sort((a, b) => a.name.localeCompare(b.name));
+  const studentList = failedStudents.map((student, index) => {
     if (student.grade < 5) {
       return (
         <tr key={index}>
@@ -101,13 +103,14 @@ const failStudents = (arr) => {
   );
 };
 
-
 function App() {
   return (
     <>
       <div id="welcome">Welcome, {username}!</div>
       <div id="studentsList">{theseStudents(studentsArray)}</div>
-      <div id="statement">This class has {showTotal(studentsArray)} students.</div>
+      <div id="statement">
+        This class has {showTotal(studentsArray)} students.
+      </div>
       <div>{studentsTable(studentsArray)}</div>
       <div>{thoseWhoPassed(studentsArray)}</div>
       <div>{failStudents(studentsArray)}</div>
