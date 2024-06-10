@@ -6,6 +6,11 @@
   color: white;
 }
 
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
 #welcome {
   display: flex;
   flex-direction: column;
@@ -25,9 +30,6 @@
 
 ul {
   background-color: pink;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 li {

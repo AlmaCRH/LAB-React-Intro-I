@@ -106,14 +106,16 @@ const failStudents = (arr) => {
 function App() {
   return (
     <>
-      <div id="welcome">Welcome, {username}!</div>
-      <div id="studentsList">{theseStudents(studentsArray)}</div>
-      <div id="statement">
-        This class has {showTotal(studentsArray)} students.
-      </div>
-      <div>{studentsTable(studentsArray)}</div>
-      <div>{thoseWhoPassed(studentsArray)}</div>
-      <div>{failStudents(studentsArray)}</div>
+      <section id="container">
+        <div id="welcome">Welcome, {username}!</div>
+        <div id="studentsList">{theseStudents(studentsArray)}</div>
+        <div id="statement">
+          This class has {showTotal(studentsArray)} students.
+        </div>
+        <div>{studentsTable(studentsArray)}</div>
+        <div>{thoseWhoPassed(studentsArray)}</div>
+        <div>{failStudents(studentsArray)}</div>
+      </section>
     </>
   );
 }
