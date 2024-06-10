@@ -34,7 +34,7 @@ We are going to create a small React Page to manage students in an academy. This
 ```
 npm create vite@latest my-react-app -- --template react
 ```
-2. Clean the code in App.jsx and style.css.
+2. Clean the code in App.jsx, index.css and App.css.
 ## Iteration 1 - Render Username from Data
 
 Initialize our React app with the following command.
