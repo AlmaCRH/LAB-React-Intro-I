@@ -85,6 +85,33 @@ function App() {
     });
   };
 
+  //ordering with filter
+
+  const studentsApproved = students2
+    .filter((student) => student.grade >= 5)
+    .sort((a, b) => b.grade - a.grade);
+
+  const tableBonus1 = (
+    <table>
+      <thead>
+        <tr>
+          <th style={styleTable}>Name</th>
+          <th style={styleTable}>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        {studentsApproved.map((student, index) => {
+          return (
+            <tr key={index}>
+              <td style={styleTable}>{student.name}</td>
+              <td style={styleTable}>{student.grade}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  );
+
   return (
     <>
       <h1>{greetMessage("Alma")}</h1>
@@ -92,6 +119,7 @@ function App() {
       <ul>{tableStudents}</ul>
       <p>the number of students is {students.length}</p>
       <ul>{tableStudentsColours}</ul>
+      <ul>{}</ul>
     </>
   );
 }
